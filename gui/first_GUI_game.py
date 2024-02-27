@@ -1,7 +1,5 @@
 import random
-import math
 import tkinter as tk
-
 
 class MyGui:
   def __init__ (self):
@@ -25,13 +23,13 @@ class MyGui:
     ChoseText = tk.Label(difChoices, text="Choose Your Difficulty", font=("helvetica", 16))
     ChoseText.grid(row=0, columnspan=4, padx=10,pady=10)
 
-    easy = tk.Button(difChoices, text="easy", font=("helvetica", 16), command=lambda: choose_difficulty("easy"))
+    easy = tk.Button(difChoices, text="easy", font=("helvetica", 16) , borderwidth=2, relief="solid", command=lambda: choose_difficulty("easy"))
     easy.grid(row=1, column=0, sticky=tk.W+tk.E, padx=5, pady=5)
-    medium = tk.Button(difChoices, text="medium", font=("helvetica", 16), command=lambda: choose_difficulty("medium"))
+    medium = tk.Button(difChoices, text="medium", font=("helvetica", 16) , borderwidth=2, relief="solid", command=lambda: choose_difficulty("medium"))
     medium.grid(row=1, column=1, sticky=tk.W+tk.E, padx=5, pady=5)
-    hard = tk.Button(difChoices, text="hard", font=("helvetica", 16), command=lambda: choose_difficulty("hard"))
+    hard = tk.Button(difChoices, text="hard", font=("helvetica", 16) , borderwidth=2, relief="solid", command=lambda: choose_difficulty("hard"))
     hard.grid(row=1, column=2, sticky=tk.W+tk.E, padx=5, pady=5)
-    hardest = tk.Button(difChoices, text="hardest", font=("helvetica", 16), command=lambda: choose_difficulty("hardest"))
+    hardest = tk.Button(difChoices, text="hardest", font=("helvetica", 16) , borderwidth=2, relief="solid", command=lambda: choose_difficulty("hardest"))
     hardest.grid(row=1, column=3, sticky=tk.W+tk.E, padx=5, pady=5)
 
     difChoices.pack(fill='both', padx=10,pady=10)
@@ -52,7 +50,7 @@ class MyGui:
     chosebetween = tk.Label(gameState, text="", font=("helvetica", 16))
     chosebetween.grid(row=1, columnspan=3, padx=10,pady=10)
 
-    guess = tk.Entry(gameState, font=("helvetica", 16))
+    guess = tk.Entry(gameState, borderwidth=2, relief="solid", font=("helvetica", 16))
     guess.grid(row=2, columnspan=3)
 
     guesses = tk.Label(gameState, text="", font=("helvetica", 16))
@@ -61,46 +59,46 @@ class MyGui:
     retryText = tk.Label(gameState, text="", font=("helvetica", 16))
     retryText.grid(row=4, columnspan=3)
 
-    btn1 = tk.Button(gameState, text="1", font=("helvetica", 18), command=lambda: update_guess("1", guess))
+    btn1 = tk.Button(gameState, text="1", font=("helvetica", 18), borderwidth=2, relief="solid", command=lambda: update_guess("1", guess))
     btn1.grid(row=5, column=0, sticky=tk.W+tk.E, padx=5, pady=5)
 
-    btn2 = tk.Button(gameState, text="2", font=("helvetica", 18), command=lambda: update_guess("2", guess))
+    btn2 = tk.Button(gameState, text="2", font=("helvetica", 18), borderwidth=2, relief="solid", command=lambda: update_guess("2", guess))
     btn2.grid(row=5, column=1, sticky=tk.W+tk.E, padx=5, pady=5)
 
-    btn3 = tk.Button(gameState, text="3", font=("helvetica", 18), command=lambda: update_guess("3", guess))
+    btn3 = tk.Button(gameState, text="3", font=("helvetica", 18), borderwidth=2, relief="solid", command=lambda: update_guess("3", guess))
     btn3.grid(row=5, column=2, sticky=tk.W+tk.E, padx=5, pady=5)
 
-    btn4 = tk.Button(gameState, text="4", font=("helvetica", 18), command=lambda: update_guess("4", guess))
+    btn4 = tk.Button(gameState, text="4", font=("helvetica", 18), borderwidth=2, relief="solid", command=lambda: update_guess("4", guess))
     btn4.grid(row=6, column=0, sticky=tk.W+tk.E, padx=5, pady=5)
 
-    btn5 = tk.Button(gameState, text="5", font=("helvetica", 18), command=lambda: update_guess("5", guess))
+    btn5 = tk.Button(gameState, text="5", font=("helvetica", 18), borderwidth=2, relief="solid", command=lambda: update_guess("5", guess))
     btn5.grid(row=6, column=1, sticky=tk.W+tk.E, padx=5, pady=5)
 
-    btn6 = tk.Button(gameState, text="6", font=("helvetica", 18), command=lambda: update_guess("6", guess))
+    btn6 = tk.Button(gameState, text="6", font=("helvetica", 18), borderwidth=2, relief="solid", command=lambda: update_guess("6", guess))
     btn6.grid(row=6, column=2, sticky=tk.W+tk.E, padx=5, pady=5)
 
-    btn7 = tk.Button(gameState, text="7", font=("helvetica", 18), command=lambda: update_guess("7", guess))
+    btn7 = tk.Button(gameState, text="7", font=("helvetica", 18), borderwidth=2, relief="solid", command=lambda: update_guess("7", guess))
     btn7.grid(row=7, column=0, sticky=tk.W+tk.E, padx=5, pady=5)
 
-    btn8 = tk.Button(gameState, text="8", font=("helvetica", 18), command=lambda: update_guess("8", guess))
+    btn8 = tk.Button(gameState, text="8", font=("helvetica", 18), borderwidth=2, relief="solid", command=lambda: update_guess("8", guess))
     btn8.grid(row=7, column=1, sticky=tk.W+tk.E, padx=5, pady=5)
 
-    btn9 = tk.Button(gameState, text="9", font=("helvetica", 18), command=lambda: update_guess("9", guess))
+    btn9 = tk.Button(gameState, text="9", font=("helvetica", 18), borderwidth=2, relief="solid", command=lambda: update_guess("9", guess))
     btn9.grid(row=7, column=2, sticky=tk.W+tk.E, padx=5, pady=5)
 
-    btn0 = tk.Button(gameState, text="0", font=("helvetica", 18), command=lambda: update_guess("0", guess))
+    btn0 = tk.Button(gameState, text="0", font=("helvetica", 18), borderwidth=2, relief="solid", command=lambda: update_guess("0", guess))
     btn0.grid(row=8, column=1, sticky=tk.W+tk.E, padx=5, pady=5)
 
-    btnb = tk.Button(gameState, text="←", font=("helvetica", 18), command=lambda: backspace(guess))
+    btnb = tk.Button(gameState, text="←", font=("helvetica", 18), borderwidth=2, relief="solid", command=lambda: backspace(guess))
     btnb.grid(row=8, column=2, sticky=tk.W+tk.E, padx=5, pady=5)
 
-    btnc = tk.Button(gameState, text="Clear", font=("helvetica", 18), command=lambda: clear(guess))
+    btnc = tk.Button(gameState, text="Clear", font=("helvetica", 18), borderwidth=2, relief="solid", command=lambda: clear(guess))
     btnc.grid(row=9, columnspan=3, sticky=tk.W+tk.E, padx=5, pady=5)
 
-    btns = tk.Button(gameState, text="Submit", font=("helvetica", 18), command=lambda: submit(self, guess))
+    btns = tk.Button(gameState, text="Submit", font=("helvetica", 18), borderwidth=2, relief="solid", command=lambda: submit(self, guess))
     btns.grid(row=10, columnspan=3, sticky=tk.W+tk.E, padx=5, pady=5)
 
-    btnr = tk.Button(gameState, text="Reset", font=("helvetica", 18), command=lambda: reset_game())
+    btnr = tk.Button(gameState, text="Reset", font=("helvetica", 18), borderwidth=2, relief="solid", command=lambda: reset_game())
     btnr.grid(row=11, columnspan=3, sticky=tk.W+tk.E, padx=5, pady=5)
 
     def choose_difficulty(difficulty):
@@ -161,6 +159,7 @@ class MyGui:
           guessed = int(guess.get())
 
           # Update attempts left text
+          self.attempts_left -= 1  # Decrement attempts_left
           guesses.config(text=f"You have {self.attempts_left} attempts Left")
           clear(guess)
 
@@ -177,7 +176,6 @@ class MyGui:
           elif (guessed > self.number_to_guess):
               retryText.config(text="Too High Try Again!")
 
-          self.attempts_left -= 1  # Decrement attempts_left
 
           if ((self.attempts_left == 0) and (guessed != self.number_to_guess)):
               gameState.pack_forget()
