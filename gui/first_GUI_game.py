@@ -1,5 +1,6 @@
 import random
 import tkinter as tk
+import ttkbootstrap as ttk
 
 class MyGui:
   def __init__ (self):
@@ -7,7 +8,7 @@ class MyGui:
     self.difficulty = None
     self.number_to_guess = None  
     self.attempts_left = None
-    self.root = tk.Tk()
+    self.root = ttk.Window(themename='darkly')
     self.root.geometry('500x800')
     self.root.title('number guessing game!')
 

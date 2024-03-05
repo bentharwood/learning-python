@@ -209,6 +209,8 @@ class App:
         mixer.music.unload()
         mixer.music.load("assets/game_state_music.mp3")
         mixer.music.play(-1)
+        self.music_button.config(image=self.music_icon)
+        self.music_playing = True
         # Call function to start the game or proceed further
     else:
         # If username_box is empty, show an error message
